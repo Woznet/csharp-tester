@@ -1,0 +1,3777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" schema="maml" xmlns="http://msh">
+  <command:command>
+    <command:details>
+      <command:name>Add-EnvPath</command:name>
+      <maml:description>
+        <maml:para>Add a Folder to Environment Variable PATH</maml:para>
+      </maml:description>
+      <command:verb>Add</command:verb>
+      <command:noun>EnvPath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Add Folders to Environment Variable PATH for Machine, User or Process scope And removes missing PATH locations</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-EnvPath</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Display updated PATH variable</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Folder or Folders to add to PATH</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>VariableTarget</maml:name>
+          <maml:description>
+            <maml:para>Which Env Path the directory gets added to.
+Machine, User or Process</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.EnvironmentVariableTarget</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Display updated PATH variable</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Folder or Folders to add to PATH</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>VariableTarget</maml:name>
+        <maml:description>
+          <maml:para>Which Env Path the directory gets added to.
+Machine, User or Process</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.EnvironmentVariableTarget</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>[</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>String - List of the New Path Variable</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Add-Font</command:name>
+      <maml:description>
+        <maml:para>Add fonts to system</maml:para>
+      </maml:description>
+      <command:verb>Add</command:verb>
+      <command:noun>Font</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Install a font from file path using CSharp code, compatitable fonts are available for use within the console font list.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-Font</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Path of Font File, can accept multiple font files
+Supported File Types - .ttc, .ttf, .fnt, .otf, .fon</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Remove</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Remove Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Path of Font File, can accept multiple font files
+Supported File Types - .ttc, .ttf, .fnt, .otf, .fon</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Remove</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Remove Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Add-PSModulePath</command:name>
+      <maml:description>
+        <maml:para>Add a folder to the PSModulePath variable</maml:para>
+      </maml:description>
+      <command:verb>Add</command:verb>
+      <command:noun>PSModulePath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Add a folder to the PSModulePath variable for the current process</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Add-PSModulePath</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Output PSModulePath after changes have been applied</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Directory to add to PSModulePath</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Output PSModulePath after changes have been applied</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Directory to add to PSModulePath</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>String if PassThru parameter is used</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Convert-FileLength</command:name>
+      <maml:description>
+        <maml:para>Converts a file length to a human readable format.</maml:para>
+      </maml:description>
+      <command:verb>Convert</command:verb>
+      <command:noun>FileLength</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Converts a file length to a human readable format.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Convert-FileLength</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Length</maml:name>
+          <maml:description>
+            <maml:para>The file length to convert.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.Int64</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Length</maml:name>
+        <maml:description>
+          <maml:para>The file length to convert.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int64</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.Int64</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Converts the file length 123456789 to a human readable format.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Converts the file lengths of all files in the current directory to a human readable format.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Convert-SecureString</command:name>
+      <maml:description>
+        <maml:para>Converts a SecureString to a plain text string.</maml:para>
+      </maml:description>
+      <command:verb>Convert</command:verb>
+      <command:noun>SecureString</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Convert-SecureString function decrypts a SecureString object and returns the corresponding plain text string. It accepts a SecureString or types convertible to SecureString, thanks to the SecureStringTransform attribute.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Convert-SecureString</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>SecureString</maml:name>
+          <maml:description>
+            <maml:para>Specifies the SecureString to convert.
+This parameter can accept a SecureString, a regular string (which will be converted to a SecureString), or a PSCredential object (from which the password will be extracted).
+The parameter accepts input from the pipeline.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.Security.SecureString</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>SecureString</maml:name>
+        <maml:description>
+          <maml:para>Specifies the SecureString to convert.
+This parameter can accept a SecureString, a regular string (which will be converted to a SecureString), or a PSCredential object (from which the password will be extracted).
+The parameter accepts input from the pipeline.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Security.SecureString</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.Security.SecureString, System.String, System.Management.Automation.PSCredential</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.Security.SecureString</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>Outputs the plain text representation of the SecureString.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Convert-UrlEncoding</command:name>
+      <maml:description>
+        <maml:para>Encodes or decodes URLs based on the specified mode.</maml:para>
+      </maml:description>
+      <command:verb>Convert</command:verb>
+      <command:noun>UrlEncoding</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>This function encodes or decodes one or more URLs. It supports pipeline input and can process multiple URLs in sequence. Uses the UrlEncode and UrlDecode methods from the System.Net.WebUtility class</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Convert-UrlEncoding</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Mode</maml:name>
+          <maml:description>
+            <maml:para>The mode of operation.
+Can be either 'Encode' or 'Decode'.
+Default is 'Decode'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Url</maml:name>
+          <maml:description>
+            <maml:para>The URL(s) to encode or decode.
+This parameter accepts an array of strings.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Mode</maml:name>
+        <maml:description>
+          <maml:para>The mode of operation.
+Can be either 'Encode' or 'Decode'.
+Default is 'Decode'.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Url</maml:name>
+        <maml:description>
+          <maml:para>The URL(s) to encode or decode.
+This parameter accepts an array of strings.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Convert-WSLPath</command:name>
+      <maml:description>
+        <maml:para>Converts file paths between Windows and Windows Subsystem for Linux (WSL) formats.</maml:para>
+      </maml:description>
+      <command:verb>Convert</command:verb>
+      <command:noun>WSLPath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Convert-WSLPath function converts file paths from Windows format to WSL format and vice versa. It leverages the wslpath command available in WSL to perform the conversion. The function can process multiple paths at once and can accept paths through the pipeline. Note that this function requires WSL to be installed and accessible on the system.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Convert-WSLPath</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path(s) to convert.
+This parameter accepts an array of strings and can also accept input from the pipeline.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>ToWSL</maml:name>
+          <maml:description>
+            <maml:para>Converts the specified path(s) from Windows format to WSL format.
+This is the default behavior if no parameter set is specified.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Convert-WSLPath</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path(s) to convert.
+This parameter accepts an array of strings and can also accept input from the pipeline.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>ToWindows</maml:name>
+          <maml:description>
+            <maml:para>Converts the specified path(s) from WSL format to Windows format.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path(s) to convert.
+This parameter accepts an array of strings and can also accept input from the pipeline.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>ToWindows</maml:name>
+        <maml:description>
+          <maml:para>Converts the specified path(s) from WSL format to Windows format.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>ToWSL</maml:name>
+        <maml:description>
+          <maml:para>Converts the specified path(s) from Windows format to WSL format.
+This is the default behavior if no parameter set is specified.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Converts a WSL path to its Windows equivalent.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Takes a Windows path from the pipeline and converts it to WSL format.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>ConvertTo-TitleCase</command:name>
+      <maml:description>
+        <maml:para>Convert Text to TitleCase</maml:para>
+      </maml:description>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>TitleCase</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Converts input text to title case based on the specified or current culture.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-TitleCase</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Culture</maml:name>
+          <maml:description>
+            <maml:para>The culture info to use for title casing, defaults to current culture.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Globalization.CultureInfo</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Text</maml:name>
+          <maml:description>
+            <maml:para>The text to convert to title case.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Culture</maml:name>
+        <maml:description>
+          <maml:para>The culture info to use for title casing, defaults to current culture.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Globalization.CultureInfo</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Text</maml:name>
+        <maml:description>
+          <maml:para>The text to convert to title case.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-ComObject</command:name>
+      <maml:description>
+        <maml:para>Retrieves COM objects from the Windows Registry that match specified filter criteria.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>ComObject</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-ComObject function searches the HKEY_CLASSES_ROOT registry hive for COM objects that match a given pattern and optionally filters them based on user-provided strings. It checks each registry key to see if it conforms to a typical COM object naming format and contains a CLSID subkey.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ComObject</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Filter</maml:name>
+          <maml:description>
+            <maml:para>An array of strings used to filter the COM objects by their names.
+The function will only
+return names that contain any of the specified strings.
+Each string is treated in a
+case-insensitive manner.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Filter</maml:name>
+        <maml:description>
+          <maml:para>An array of strings used to filter the COM objects by their names.
+The function will only
+return names that contain any of the specified strings.
+Each string is treated in a
+case-insensitive manner.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-ElementName</command:name>
+      <maml:description>
+        <maml:para>Get the name of an element.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>ElementName</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>This function returns the name of an element.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ElementName</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Expression</maml:name>
+          <maml:description>
+            <maml:para>The expression to get the name of.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.Management.Automation.ScriptBlock</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Expression</maml:name>
+        <maml:description>
+          <maml:para>The expression to get the name of.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Management.Automation.ScriptBlock</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-EnvPath</command:name>
+      <maml:description>
+        <maml:para>Retrieves the directories listed in the PATH environment variable.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>EnvPath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-EnvPath function lists all directories specified in the PATH environment variable for a specified scope: either the current user or the machine.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-EnvPath</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>VariableTarget</maml:name>
+          <maml:description>
+            <maml:para>Specifies the scope of the environment variable.
+Acceptable values are 'Machine' and 'User'.
+The default is 'Machine'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.EnvironmentVariableTarget</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>VariableTarget</maml:name>
+        <maml:description>
+          <maml:para>Specifies the scope of the environment variable.
+Acceptable values are 'Machine' and 'User'.
+The default is 'Machine'.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.EnvironmentVariableTarget</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>Each line of output represents a directory in the PATH environment variable.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-GitHubUserRepo</command:name>
+      <maml:description>
+        <maml:para>Download GitHub User Gists &amp; Repositories using REST API and ConcurrentQueue collections for improved performance</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>GitHubUserRepo</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Uses git.exe to clone the gists and repositories of a github user. You can filter repositories by name and language. -Exclude parameter will exclude any repositories that match the string/strings listed. To filter by programming language use FilterByLanguage to enable the filter by language feature then use the -Languages parameter to list the programming languages you want downloaded</maml:para>
+      <maml:para>Requires git.exe</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-GitHubUserRepo</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+          <maml:name>Exclude</maml:name>
+          <maml:description>
+            <maml:para>Exclude repositories whose names match the string/strings defined with -Exclude</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>FilterByLanguage</maml:name>
+          <maml:description>
+            <maml:para>When this switch is used it will filter repositories who language is not specified in the -Languages parameter.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
+          <maml:name>Languages</maml:name>
+          <maml:description>
+            <maml:para>The languages to filter repositories for when FilterByLanguage switch is used.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Directory where the user's repositories are to be downloaded.
+Repositories are downlaoded to $Path\GITHUB_USERNAME\REPOSITORY_NAME</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
+          <maml:name>ThrottleLimit</maml:name>
+          <maml:description>
+            <maml:para>Specifies the number of script blocks to clone a specific repository that run in parallel.
+ The default value is 5.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
+          <maml:name>Token</maml:name>
+          <maml:description>
+            <maml:para>GitHub API token.
+ If not set, function checks for env:GITHUB_TOKEN and uses that for the Token parameter if it exists.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>UserName</maml:name>
+          <maml:description>
+            <maml:para>The name of the user whose repositories are to be downloaded</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+        <maml:name>Exclude</maml:name>
+        <maml:description>
+          <maml:para>Exclude repositories whose names match the string/strings defined with -Exclude</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>FilterByLanguage</maml:name>
+        <maml:description>
+          <maml:para>When this switch is used it will filter repositories who language is not specified in the -Languages parameter.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
+        <maml:name>Languages</maml:name>
+        <maml:description>
+          <maml:para>The languages to filter repositories for when FilterByLanguage switch is used.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Directory where the user's repositories are to be downloaded.
+Repositories are downlaoded to $Path\GITHUB_USERNAME\REPOSITORY_NAME</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
+        <maml:name>ThrottleLimit</maml:name>
+        <maml:description>
+          <maml:para>Specifies the number of script blocks to clone a specific repository that run in parallel.
+ The default value is 5.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
+        <maml:name>Token</maml:name>
+        <maml:description>
+          <maml:para>GitHub API token.
+ If not set, function checks for env:GITHUB_TOKEN and uses that for the Token parameter if it exists.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>UserName</maml:name>
+        <maml:description>
+          <maml:para>The name of the user whose repositories are to be downloaded</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-HostEntry</command:name>
+      <maml:description>
+        <maml:para>Retrieves DNS host entry information for given IP addresses or hostnames.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>HostEntry</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-HostEntry function queries DNS to get the host entry information for a specified list of IP addresses or hostnames. It accepts input directly or via the pipeline and outputs the corresponding System.Net.IPHostEntry objects.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-HostEntry</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Address</maml:name>
+          <maml:description>
+            <maml:para>Specifies the IP address or hostname for which to get the host entry information.
+This parameter accepts an array of strings, each representing an IP address or hostname.
+It can also accept input from the pipeline.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Address</maml:name>
+        <maml:description>
+          <maml:para>Specifies the IP address or hostname for which to get the host entry information.
+This parameter accepts an array of strings, each representing an IP address or hostname.
+It can also accept input from the pipeline.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>You can pipe a string array of IP addresses or hostnames to Get-HostEntry.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Net.IPHostEntry</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>Returns an array of IPHostEntry objects that represent the DNS host entry information for each IP address or hostname provided.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Net.IPHostEntry</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-InstalledSoftware</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>InstalledSoftware</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-InstalledSoftware</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="true" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Name</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Name Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="true" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Name Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-ItemFromClipboard</command:name>
+      <maml:description>
+        <maml:para>Get file path from clipboard</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>ItemFromClipboard</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Trims single and double quotes from path stored in clipboard then passes results to Get-Item Designed for taking the clipboard contents from Windows Explorer "Copy Path" into PowerShell.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ItemFromClipboard</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples />
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-ParameterValue</command:name>
+      <maml:description>
+        <maml:para>Get the actual values of parameters which have manually set (non-null) default values or values passed in the call</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>ParameterValue</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Unlike $PSBoundParameters, the hashtable returned from Get-ParameterValues includes non-empty default parameter values. NOTE: Default values that are the same as the implied values are ignored (e.g.: empty strings, zero numbers, nulls).</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ParameterValue</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-PublicIP</command:name>
+      <maml:description>
+        <maml:para>Retrieves the public IP address of the local system.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>PublicIP</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-PublicIP function queries an external service to find the public IP address of the system on which it is run. It supports two different services: ipinfo.io and ifconfig.me, allowing the user to choose based on preference or availability. Each service provides the IP information in JSON format.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-PublicIP</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Tool</maml:name>
+          <maml:description>
+            <maml:para>Specifies the api tool used to fetch the public IP address.
+The valid choices are 'ifconfig' and 'ipinfo'.
+- 'ipinfo' uses the URL 'https://ipinfo.io/json' to retrieve the IP information.
+- 'ifconfig' uses the URL 'https://ifconfig.me/all.json' to retrieve the IP information.
+The default is 'ipinfo'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Tool</maml:name>
+        <maml:description>
+          <maml:para>Specifies the api tool used to fetch the public IP address.
+The valid choices are 'ifconfig' and 'ipinfo'.
+- 'ipinfo' uses the URL 'https://ipinfo.io/json' to retrieve the IP information.
+- 'ifconfig' uses the URL 'https://ifconfig.me/all.json' to retrieve the IP information.
+The default is 'ipinfo'.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-RedirectedUrl</command:name>
+      <maml:description>
+        <maml:para>Checks URI redirection using HTTP HEAD requests.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>RedirectedUrl</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>'Get-RedirectedUrl' determines if URIs redirect to other locations by performing HTTP HEAD requests. It can operate in synchronous mode, processing each URI sequentially, or in asynchronous mode, handling multiple URIs in parallel for enhanced efficiency.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-RedirectedUrl</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>NoAsync</maml:name>
+          <maml:description>
+            <maml:para>Switches to synchronous operation, processing URIs sequentially.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Uri</maml:name>
+          <maml:description>
+            <maml:para>Specifies an array of absolute URIs for HTTP HEAD requests.
+Mandatory and accepts pipeline input.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>NoAsync</maml:name>
+        <maml:description>
+          <maml:para>Switches to synchronous operation, processing URIs sequentially.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Uri</maml:name>
+        <maml:description>
+          <maml:para>Specifies an array of absolute URIs for HTTP HEAD requests.
+Mandatory and accepts pipeline input.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>You can pipe a string array of absolute URIs to Get-RedirectedUrl.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>Outputs the final redirected URL for each input URI.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-RelativePath</command:name>
+      <maml:description>
+        <maml:para>Calculates the relative path from one directory to another.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>RelativePath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>This function returns the relative path from a base directory to a target path. It can be useful in scripts where path manipulation is required.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-RelativePath</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The target path for which the relative path is calculated.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>RelativeTo</maml:name>
+          <maml:description>
+            <maml:para>The base path from which the relative path is calculated.
+Defaults to the current working directory.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The target path for which the relative path is calculated.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>RelativeTo</maml:name>
+        <maml:description>
+          <maml:para>The base path from which the relative path is calculated.
+Defaults to the current working directory.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-ShortPath</command:name>
+      <maml:description>
+        <maml:para>Shortens a filesystem path based on the width of the PowerShell window.</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>ShortPath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>This function takes a filesystem path and shortens it if necessary to fit within one-third of the PowerShell window's width, focusing on preserving the end of the path.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-ShortPath</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>The filesystem path to shorten.
+If not provided, defaults to the current working directory.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The filesystem path to shorten.
+If not provided, defaults to the current working directory.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-UserAgent</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>UserAgent</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-UserAgent</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Import-Prompt</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Import</command:verb>
+      <command:noun>Prompt</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Import-Prompt</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Install-PSWinUpdate</command:name>
+      <maml:description>
+        <maml:para>Installs pending Windows updates and optionally adds Microsoft product updates and handles system reboots.</maml:para>
+      </maml:description>
+      <command:verb>Install</command:verb>
+      <command:noun>PSWinUpdate</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Uses PSWindowsUpdate module to install available Windows updates. It can also enable updates for other Microsoft products and manage automatic system reboots if needed.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Install-PSWinUpdate</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>AddServiceManager</maml:name>
+          <maml:description>
+            <maml:para>Enable Microsoft Updates</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Reboot</maml:name>
+          <maml:description>
+            <maml:para>The computer will reboot automatically if required by the installed updates.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>AddServiceManager</maml:name>
+        <maml:description>
+          <maml:para>Enable Microsoft Updates</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Reboot</maml:name>
+        <maml:description>
+          <maml:para>The computer will reboot automatically if required by the installed updates.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>None. You cannot pipe objects to Install-PSWinUpdate.</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>Table - Install-PSWinUpdate outputs the properties X,ComputerName,Result,KB,Size,Title from the Get-WindowsUpdate function</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-7zExtract</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>7zExtract</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-7zExtract</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Out</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Out Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Path Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>SeperateDirs</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill SeperateDirs Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Out</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Out Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Path Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>SeperateDirs</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill SeperateDirs Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-ChocoUpgradeAll</command:name>
+      <maml:description>
+        <maml:para>Upgrades all outdated Chocolatey packages.</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>ChocoUpgradeAll</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Invoke-ChocoUpgradeAll function checks for outdated Chocolatey packages and optionally upgrades them. It requires Chocolatey to be installed and accessible in the system PATH.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-ChocoUpgradeAll</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>CheckOnly</maml:name>
+          <maml:description>
+            <maml:para>If specified, the function will only check for outdated packages without performing any upgrades.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Confirm Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WhatIf Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>CheckOnly</maml:name>
+        <maml:description>
+          <maml:para>If specified, the function will only check for outdated packages without performing any upgrades.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Confirm Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill WhatIf Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>None</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>You cannot pipe input to this function.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>Dependent on the Chocolatey command output.</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>If -CheckOnly is specified, outputs the list of outdated packages. Otherwise, it outputs the results of the upgrade process.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-Download</command:name>
+      <maml:description>
+        <maml:para>Downloads a file from a specified URL.</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>Download</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Invoke-Download function downloads a file from the internet using a specified URL. It supports various parameters to control the download process, such as setting a custom user agent, specifying the destination folder, handling file overwrites, and showing download progress.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-Download</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>BlockFile</maml:name>
+          <maml:description>
+            <maml:para>If specified, the downloaded file will be marked as coming from the internet (Windows only).</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Destination</maml:name>
+          <maml:description>
+            <maml:para>The local path where the file will be downloaded.
+If not specified, the current directory will be used.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+          <maml:name>FileName</maml:name>
+          <maml:description>
+            <maml:para>The name of the file to save the download as.
+If not specified, the name is derived from the URL or content disposition.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>IgnoreDate</maml:name>
+          <maml:description>
+            <maml:para>If specified, the last modified date of the file won't be set.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>NoClobber</maml:name>
+          <maml:description>
+            <maml:para>If specified, existing files with the same name won't be overwritten.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>NoProgress</maml:name>
+          <maml:description>
+            <maml:para>If specified, the download progress won't be displayed.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>If specified, the downloaded file object will be output to the pipeline.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>TempPath</maml:name>
+          <maml:description>
+            <maml:para>The temporary path where the file will be initially downloaded.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>URL</maml:name>
+          <maml:description>
+            <maml:para>The URL of the file to download.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>UserAgent</maml:name>
+          <maml:description>
+            <maml:para>An array of user agent strings to use for the download request.
+Defaults to common browser user agents.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>BlockFile</maml:name>
+        <maml:description>
+          <maml:para>If specified, the downloaded file will be marked as coming from the internet (Windows only).</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Destination</maml:name>
+        <maml:description>
+          <maml:para>The local path where the file will be downloaded.
+If not specified, the current directory will be used.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+        <maml:name>FileName</maml:name>
+        <maml:description>
+          <maml:para>The name of the file to save the download as.
+If not specified, the name is derived from the URL or content disposition.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>IgnoreDate</maml:name>
+        <maml:description>
+          <maml:para>If specified, the last modified date of the file won't be set.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>NoClobber</maml:name>
+        <maml:description>
+          <maml:para>If specified, existing files with the same name won't be overwritten.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>NoProgress</maml:name>
+        <maml:description>
+          <maml:para>If specified, the download progress won't be displayed.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>If specified, the downloaded file object will be output to the pipeline.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>TempPath</maml:name>
+        <maml:description>
+          <maml:para>The temporary path where the file will be initially downloaded.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>URL</maml:name>
+        <maml:description>
+          <maml:para>The URL of the file to download.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>UserAgent</maml:name>
+        <maml:description>
+          <maml:para>An array of user agent strings to use for the download request.
+Defaults to common browser user agents.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>You can pipe a URL to Invoke-Download.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.IO.FileInfo</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>If -PassThru is specified, the function outputs the downloaded file object.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># Downloads 'file.zip' from 'http://example.com' to the 'C:\Downloads' folder.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># Downloads 'file.zip' from 'http://example.com' to the current directory without showing progress.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-GitClone</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>GitClone</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-GitClone</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Path Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Repo</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Repo Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Path Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Repo</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Repo Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-InDirectory</command:name>
+      <maml:description>
+        <maml:para>Executes a script block within the context of specified directories.  If a file is specified the script block is run in the directory of that file.</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>InDirectory</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Invoke-InDirectory function is designed to execute a provided script block in one or more specified directories. This functionality is particularly useful for commands that are dependent on the current directory context, such as file system operations, git commands, or running scripts that use relative paths.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-InDirectory</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies one or more paths in which the script block will be executed.
+When a file is specified the parent directory is used.
+The function changes to each directory and executes the script block.
+This parameter accepts pipeline input and can be specified by property name.
+A validation script ensures that each path provided exists.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>ScriptBlock</maml:name>
+          <maml:description>
+            <maml:para>Defines the script block that will be executed in the context of each specified directory.
+The script block should contain the commands that you want to run.
+This parameter is mandatory and cannot be empty.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.Management.Automation.ScriptBlock</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies one or more paths in which the script block will be executed.
+When a file is specified the parent directory is used.
+The function changes to each directory and executes the script block.
+This parameter accepts pipeline input and can be specified by property name.
+A validation script ensures that each path provided exists.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>ScriptBlock</maml:name>
+        <maml:description>
+          <maml:para>Defines the script block that will be executed in the context of each specified directory.
+The script block should contain the commands that you want to run.
+This parameter is mandatory and cannot be empty.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Management.Automation.ScriptBlock</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String, System.IO.DirectoryInfo</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>You can pipe string paths, file objects, or directory objects to Invoke-InDirectory.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>Depends on the script block's output. The function outputs whatever the script block returns for each directory.</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># This example executes 'Get-ChildItem' in the 'C:\Projects\Project1' directory.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># This example fetches all directories under 'C:\Projects\' and runs 'git status' in each of them.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 3: EXAMPLE 3 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># This example demonstrates using the function with pipeline input to execute 'git pull' in both 'C:\Projects\Project1' and 'C:\Projects\Project2'.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-Parser</command:name>
+      <maml:description>
+        <maml:para>Parses a PowerShell script, scriptblock, or function definition to extract used commands and variables.</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>Parser</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Invoke-Parser function analyzes PowerShell code from a file, a code snippet, or a function definition. It extracts and lists all the commands and variables used in the input. It supports three modes of input: File, Code, and FunctionName.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-Parser</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to a PowerShell script file.
+The function parses the file and extracts commands and variables used in it.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Invoke-Parser</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Code</maml:name>
+          <maml:description>
+            <maml:para>Specifies a string containing a block of PowerShell code.
+The function parses the code to extract commands and variables.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>Invoke-Parser</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>FunctionName</maml:name>
+          <maml:description>
+            <maml:para>Specifies the name of a PowerShell function.
+The function parses the function definition to extract commands and variables.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Code</maml:name>
+        <maml:description>
+          <maml:para>Specifies a string containing a block of PowerShell code.
+The function parses the code to extract commands and variables.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>FunctionName</maml:name>
+        <maml:description>
+          <maml:para>Specifies the name of a PowerShell function.
+The function parses the function definition to extract commands and variables.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to a PowerShell script file.
+The function parses the file and extracts commands and variables used in it.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>PSCustomObject</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 3</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 3: EXAMPLE 3 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Invoke-ReArmLicense</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Invoke</command:verb>
+      <command:noun>ReArmLicense</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Invoke-ReArmLicense</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>ComputerName</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ComputerName Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+          <maml:name>Credential</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Credential Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.PSCredential</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Port</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Port Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>ReArm</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill ReArm Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Restart</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Restart Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>ComputerName</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ComputerName Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+        <maml:name>Credential</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Credential Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.PSCredential</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Port</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Port Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>ReArm</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill ReArm Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Restart</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Restart Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Join-Url</command:name>
+      <maml:description>
+        <maml:para>Joins a base URI with a child path segment.</maml:para>
+      </maml:description>
+      <command:verb>Join</command:verb>
+      <command:noun>Url</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Join-Url function takes a base URI and a child path segment, and combines them into a single well-formed URI. It handles the proper inclusion of slashes between the base and child segments. By default, it outputs the combined URI as a string, but it can also return a URI object.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Join-Url</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Base</maml:name>
+          <maml:description>
+            <maml:para>The base URI to which the child path will be appended.
+It must be a valid URI.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.Uri</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Child</maml:name>
+          <maml:description>
+            <maml:para>The child path segment to append to the base URI.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>OutUri</maml:name>
+          <maml:description>
+            <maml:para>If specified, the function returns the result as a [uri] object.
+Otherwise, it returns a string.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Base</maml:name>
+        <maml:description>
+          <maml:para>The base URI to which the child path will be appended.
+It must be a valid URI.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Uri</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Child</maml:name>
+        <maml:description>
+          <maml:para>The child path segment to append to the base URI.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>OutUri</maml:name>
+        <maml:description>
+          <maml:para>If specified, the function returns the result as a [uri] object.
+Otherwise, it returns a string.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>[</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.Uri</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>[</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Returns 'http://example.com/path/segment'.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Returns a URI object for 'http://example.com/path/segment'.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>New-AnsiString</command:name>
+      <maml:description>
+        <maml:para>Builds an ANSI escape sequence string for setting the foreground or background color.</maml:para>
+      </maml:description>
+      <command:verb>New</command:verb>
+      <command:noun>AnsiString</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The New-AnsiString function generates an ANSI escape sequence string that can be used to set the foreground or background color in a console application. It supports specifying the color using RGB values or predefined color names.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-AnsiString</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+          <maml:name>Blue</maml:name>
+          <maml:description>
+            <maml:para>Specifies the blue component of the RGB color.
+Must be an integer between 0 and 255.
+If not provided, a random value between 0 and 255 will be used.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>ColorTarget</maml:name>
+          <maml:description>
+            <maml:para>Specifies whether the color should be applied to the foreground or background.
+Valid values are 'Foreground' and 'Background'.
+The default value is 'Foreground'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>Green</maml:name>
+          <maml:description>
+            <maml:para>Specifies the green component of the RGB color.
+Must be an integer between 0 and 255.
+If not provided, a random value between 0 and 255 will be used.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Red</maml:name>
+          <maml:description>
+            <maml:para>Specifies the red component of the RGB color.
+Must be an integer between 0 and 255.
+If not provided, a random value between 0 and 255 will be used.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>New-AnsiString</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Color</maml:name>
+          <maml:description>
+            <maml:para>Specifies the color using a predefined color name.
+The available color names can be tab-completed.
+If not provided, a random RGB color will be used.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>ColorTarget</maml:name>
+          <maml:description>
+            <maml:para>Specifies whether the color should be applied to the foreground or background.
+Valid values are 'Foreground' and 'Background'.
+The default value is 'Foreground'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+      <command:syntaxItem>
+        <maml:name>New-AnsiString</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>ColorTarget</maml:name>
+          <maml:description>
+            <maml:para>Specifies whether the color should be applied to the foreground or background.
+Valid values are 'Foreground' and 'Background'.
+The default value is 'Foreground'.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Reset</maml:name>
+          <maml:description>
+            <maml:para>Specifies whether to reset the color to the default.
+If this switch is present, all other parameters will be ignored.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
+        <maml:name>Blue</maml:name>
+        <maml:description>
+          <maml:para>Specifies the blue component of the RGB color.
+Must be an integer between 0 and 255.
+If not provided, a random value between 0 and 255 will be used.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Color</maml:name>
+        <maml:description>
+          <maml:para>Specifies the color using a predefined color name.
+The available color names can be tab-completed.
+If not provided, a random RGB color will be used.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>ColorTarget</maml:name>
+        <maml:description>
+          <maml:para>Specifies whether the color should be applied to the foreground or background.
+Valid values are 'Foreground' and 'Background'.
+The default value is 'Foreground'.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>Green</maml:name>
+        <maml:description>
+          <maml:para>Specifies the green component of the RGB color.
+Must be an integer between 0 and 255.
+If not provided, a random value between 0 and 255 will be used.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Red</maml:name>
+        <maml:description>
+          <maml:para>Specifies the red component of the RGB color.
+Must be an integer between 0 and 255.
+If not provided, a random value between 0 and 255 will be used.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Int32</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Reset</maml:name>
+        <maml:description>
+          <maml:para>Specifies whether to reset the color to the default.
+If this switch is present, all other parameters will be ignored.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>The ANSI escape sequence string that sets the specified color.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 3</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 3: EXAMPLE 3 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>New-DevPad</command:name>
+      <maml:description>
+        <maml:para>Creates a new development folder (DevPad) and optionally sets an environment variable.</maml:para>
+      </maml:description>
+      <command:verb>New</command:verb>
+      <command:noun>DevPad</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The New-DevPad function creates a folder for development purposes based on the current date and optionally sets a user environment variable 'DevPad' to this folder's path. The folder is created under a specified path or defaults to 'D:\_dev\DPad'.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-DevPad</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Confirm Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>NoEnvVariable</maml:name>
+          <maml:description>
+            <maml:para>Skip setting the 'DevPad' environment variable.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the base path where the DevPad folder will be created.
+The default path is 'D:\_dev\DPad'.
+The final folder includes the current year and date.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WhatIf Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Confirm Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>NoEnvVariable</maml:name>
+        <maml:description>
+          <maml:para>Skip setting the 'DevPad' environment variable.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the base path where the DevPad folder will be created.
+The default path is 'D:\_dev\DPad'.
+The final folder includes the current year and date.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill WhatIf Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Open-NotepadPlusPlus</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Open</command:verb>
+      <command:noun>NotepadPlusPlus</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Open-NotepadPlusPlus</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Path Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Path Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Remove-Diacritics</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Remove</command:verb>
+      <command:noun>Diacritics</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Remove-Diacritics</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>CompatibilityDecomposition</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill CompatibilityDecomposition Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>InputStrings</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill InputStrings Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>CompatibilityDecomposition</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill CompatibilityDecomposition Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>InputStrings</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill InputStrings Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.Management.Automation.SwitchParameter</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Remove-EnvPath</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Remove</command:verb>
+      <command:noun>EnvPath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Remove-EnvPath</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Confirm Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Select a Path from the PATH environment variable</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>VariableTarget</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill VariableTarget Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.EnvironmentVariableTarget</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WhatIf Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Confirm Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Select a Path from the PATH environment variable</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>VariableTarget</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill VariableTarget Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.EnvironmentVariableTarget</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill WhatIf Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Remove-InvalidPathCharacters</command:name>
+      <maml:description>
+        <maml:para>Remove invalid filename characters</maml:para>
+      </maml:description>
+      <command:verb>Remove</command:verb>
+      <command:noun>InvalidPathCharacters</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>Replaces the invalid filename characters with an empty string.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Remove-InvalidPathCharacters</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>String</maml:name>
+          <maml:description>
+            <maml:para>String that will have invalid filename characters removed from.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>String</maml:name>
+        <maml:description>
+          <maml:para>String that will have invalid filename characters removed from.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>### EXAMPLE 2</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>## PARAMETERS</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Set-GitFileCommitTime</command:name>
+      <maml:description>
+        <maml:para>Sets the last commit time as the last write time for files in a Git repository.</maml:para>
+      </maml:description>
+      <command:verb>Set</command:verb>
+      <command:noun>GitFileCommitTime</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The `Set-GitFileCommitTime` function updates the last write time of files in a Git repository to match their last commit time. This can be useful for build systems, backup solutions, or any scenario where file timestamps need to reflect their version control history. The function supports processing paths from the pipeline and can operate in a verbose mode for additional output details. It also includes a stopwatch feature to measure the duration of the operation.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-GitFileCommitTime</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Confirm</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill Confirm Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>PassThru</maml:name>
+          <maml:description>
+            <maml:para>Returns an object with the path and updated commit time for each file processed.
+This parameter is useful for piping output to further processing commands.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Path</maml:name>
+          <maml:description>
+            <maml:para>Specifies the path to the Git repository.
+This can be a full path or a relative path.
+If not specified, it defaults to the current working directory.
+The function verifies the existence of a .git directory at the specified path.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Stopwatch</maml:name>
+          <maml:description>
+            <maml:para>Includes a stopwatch timer to measure the duration of the operation.
+When specified, the function outputs the total time taken to complete the process.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>WhatIf</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill WhatIf Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill Confirm Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>PassThru</maml:name>
+        <maml:description>
+          <maml:para>Returns an object with the path and updated commit time for each file processed.
+This parameter is useful for piping output to further processing commands.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>Specifies the path to the Git repository.
+This can be a full path or a relative path.
+If not specified, it defaults to the current working directory.
+The function verifies the existence of a .git directory at the specified path.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Stopwatch</maml:name>
+        <maml:description>
+          <maml:para>Includes a stopwatch timer to measure the duration of the operation.
+When specified, the function outputs the total time taken to complete the process.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill WhatIf Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># Updates the last write time of all files in the specified Git repository to match their last commit time.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para># Finds all directories under C:\Repos and updates the file timestamps in each Git repository found.
+Outputs the details of the processed files.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Test-IfAdmin</command:name>
+      <maml:description>
+        <maml:para>{{ Fill in the Synopsis }}</maml:para>
+      </maml:description>
+      <command:verb>Test</command:verb>
+      <command:noun>IfAdmin</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>{{ Fill in the Description }}</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-IfAdmin</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>System.Object</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: Example 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>{{ Add example description here }}</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Test-PendingReboot</command:name>
+      <maml:description>
+        <maml:para>Test the pending reboot status on a local and/or remote computer.
+Updated to be compatible with powershell 7+, converted Invoke-WmiMethod to Invoke-CimMethod.</maml:para>
+      </maml:description>
+      <command:verb>Test</command:verb>
+      <command:noun>PendingReboot</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>This function will query the registry on a local and/or remote computer and determine if the system is pending a reboot, from Microsoft/Windows updates, Configuration Manager Client SDK, Pending Computer Rename, Domain Join, Pending File Rename Operations and Component Based Servicing.</maml:para>
+      <maml:para>ComponentBasedServicing = Component Based Servicing WindowsUpdate = Windows Update / Auto Update CCMClientSDK = SCCM 2012 Clients only (DetermineifRebootPending method) otherwise $null value PendingComputerRenameDomainJoin = Detects a pending computer rename and/or pending domain join PendingFileRenameOperations = PendingFileRenameOperations, when this property returns true, it can be a false positive PendingFileRenameOperationsValue = PendingFilerenameOperations registry value; used to filter if need be, Anti-Virus will leverage this key property for def/dat removal, giving a false positive</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-PendingReboot</maml:name>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>ComputerName</maml:name>
+          <maml:description>
+            <maml:para>A single computer name or an array of computer names.
+ The default is localhost ($env:COMPUTERNAME).</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Credential</maml:name>
+          <maml:description>
+            <maml:para>Specifies a user account that has permission to perform this action.
+The default is the current user.
+Type a username, such as User01, Domain01\User01, or User@Contoso.com.
+Or, enter a PSCredential object,
+such as an object that is returned by the Get-Credential cmdlet.
+When you type a user name, you are
+prompted for a password.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.PSCredential</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>Detailed</maml:name>
+          <maml:description>
+            <maml:para>Indicates that this function returns a detailed result of pending reboot information, why the system is
+pending a reboot, not just a true/false response.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>SkipConfigurationManagerClientCheck</maml:name>
+          <maml:description>
+            <maml:para>Indicates that this function will not test the Client SDK WMI class that is provided by the System
+Center Configuration Manager Client.
+ This parameter is useful when SCCM is not used/installed on
+the targeted systems.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+          <maml:name>SkipPendingFileRenameOperationsCheck</maml:name>
+          <maml:description>
+            <maml:para>Indicates that this function will not test the PendingFileRenameOperations MultiValue String property
+of the Session Manager registry key.
+ This parameter is useful for eliminating possible false positives.
+Many Anti-Virus packages will use the PendingFileRenameOperations MultiString Value in order to remove
+stale definitions and/or .dat files.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>ComputerName</maml:name>
+        <maml:description>
+          <maml:para>A single computer name or an array of computer names.
+ The default is localhost ($env:COMPUTERNAME).</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.String[]</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Credential</maml:name>
+        <maml:description>
+          <maml:para>Specifies a user account that has permission to perform this action.
+The default is the current user.
+Type a username, such as User01, Domain01\User01, or User@Contoso.com.
+Or, enter a PSCredential object,
+such as an object that is returned by the Get-Credential cmdlet.
+When you type a user name, you are
+prompted for a password.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.PSCredential</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>Detailed</maml:name>
+        <maml:description>
+          <maml:para>Indicates that this function returns a detailed result of pending reboot information, why the system is
+pending a reboot, not just a true/false response.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>SkipConfigurationManagerClientCheck</maml:name>
+        <maml:description>
+          <maml:para>Indicates that this function will not test the Client SDK WMI class that is provided by the System
+Center Configuration Manager Client.
+ This parameter is useful when SCCM is not used/installed on
+the targeted systems.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="none">
+        <maml:name>SkipPendingFileRenameOperationsCheck</maml:name>
+        <maml:description>
+          <maml:para>Indicates that this function will not test the PendingFileRenameOperations MultiValue String property
+of the Session Manager registry key.
+ This parameter is useful for eliminating possible false positives.
+Many Anti-Virus packages will use the PendingFileRenameOperations MultiString Value in order to remove
+stale definitions and/or .dat files.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.Management.Automation.SwitchParameter</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues />
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>ComputerName IsRebootPending
+------------ ---------------
+WKS01                   True</maml:para>
+          <maml:para>This example returns the ComputerName and IsRebootPending properties.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>This example will return a bool value based on the pending reboot test for the local computer.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 3: EXAMPLE 3 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>ComputerName                     : dc01
+ComponentBasedServicing          : True
+PendingComputerRenameDomainJoin  : False
+PendingFileRenameOperations      : False
+PendingFileRenameOperationsValue :
+SystemCenterConfigManager        : False
+WindowsUpdateAutoUpdate          : True
+IsRebootPending                  : True</maml:para>
+          <maml:para>This example will test the pending reboot status for dc01, providing detailed information</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 4: EXAMPLE 4 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>CommputerName                    : dc01
+ComponentBasedServicing          : True
+PendingComputerRenameDomainJoin  : False
+PendingFileRenameOperations      : False
+PendingFileRenameOperationsValue :
+SystemCenterConfigManager        :
+WindowsUpdateAutoUpdate          : True
+IsRebootPending                  : True</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Test-Url</command:name>
+      <maml:description>
+        <maml:para>Tests if a given URI string is well-formed.</maml:para>
+      </maml:description>
+      <command:verb>Test</command:verb>
+      <command:noun>Url</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Test-Url function checks if the provided URI string is well-formed according to the specified URI kind (Absolute or Relative).</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-Url</maml:name>
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+          <maml:name>Uri</maml:name>
+          <maml:description>
+            <maml:para>Specifies the URI string to be tested.
+This parameter is mandatory and accepts input from the pipeline.</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        </command:parameter>
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+          <maml:name>UriKind</maml:name>
+          <maml:description>
+            <maml:para>Specifies the kind of the URI to be tested (Absolute or Relative).
+The default is Absolute.</maml:para>
+          </maml:description>
+          <command:parameterValue required="false" variableLength="true">System.UriKind</command:parameterValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
+        <maml:name>Uri</maml:name>
+        <maml:description>
+          <maml:para>Specifies the URI string to be tested.
+This parameter is mandatory and accepts input from the pipeline.</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
+        <maml:name>UriKind</maml:name>
+        <maml:description>
+          <maml:para>Specifies the kind of the URI to be tested (Absolute or Relative).
+The default is Absolute.</maml:para>
+        </maml:description>
+        <command:parameterValue required="false" variableLength="true">System.UriKind</command:parameterValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <dev:name>System.String</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <dev:name>Boolean</dev:name>
+        </dev:type>
+        <maml:description>
+          <maml:para>Returns True if the URI is well-formed, otherwise returns False.
+
+{{ Fill in the Description }}</maml:para>
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet />
+    <command:examples>
+      <command:example>
+        <maml:title>--------- Example 1: EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Returns True if the URL is well-formed, otherwise returns False.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- Example 2: EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>Tests the URI string received from the pipeline and returns True if it is well-formed, otherwise False.</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>
